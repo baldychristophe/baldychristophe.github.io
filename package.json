@@ -1,7 +1,9 @@
 {
   "name": "resume",
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
