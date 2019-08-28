@@ -7,9 +7,13 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
+const buildBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  build: {
+    publicPath: 'public'
+  }
+} : {}
+
 export default {
   ...routerBase,
-  build: {
-    publicPath: 'public/',
-  }
+  ...buildBase,
 }
