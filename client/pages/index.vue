@@ -1,8 +1,12 @@
 <template lang="pug">
   .page-container
     .intro-block
+      img.avatar(src="~/assets/images/christophe_baldy.jpg")
       h1 Christophe Baldy
-      .details +33 06 12 07 07 34 / baldychristophe at gmail.com / fr.linkedin.com/in/christophe-baldy / github.com/baldychristophe
+      .details 
+        a(href="fr.linkedin.com/in/christophe-baldy") linkedin
+        span /
+        a(href="github.com/baldychristophe") github
     .content-block 
       span Hello world with nuxt!
 </template>
@@ -24,8 +28,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.hello {
-  color: red;
-  outline: 1px solid green;
+.intro-block {
+  text-align: center;
+  margin: 20px;
+
+  .avatar {
+    border-radius: 50%;
+    max-width: 200px;
+  }
 }
 </style>
