@@ -1,3 +1,16 @@
 <template lang="pug">
-  div Hello world with nuxt!
+  .hello Hello world with nuxt!
 </template>
+
+<script>
+export default {
+  
+}
+</script>
+
+<style scoped lang="scss">
+.hello {
+  color: red;
+  outline: 1px solid black;
+}
+</style>
