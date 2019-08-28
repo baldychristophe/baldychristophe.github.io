@@ -1,5 +1,10 @@
 <template lang="pug">
-  .hello Hello world with nuxt!
+  .page-container
+    .intro-block
+      h1 Christophe Baldy
+      .details +33 06 12 07 07 34 / baldychristophe at gmail.com / fr.linkedin.com/in/christophe-baldy / github.com/baldychristophe
+    .content-block 
+      span Hello world with nuxt!
 </template>
 
 <script>
