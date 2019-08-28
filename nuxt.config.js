@@ -13,5 +13,8 @@ const buildBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 export default {
   ...routerBase,
   ...buildBase,
+  css: [
+    '@/assets/styles/index.scss',
+  ],
   srcDir: 'client/',
 }
