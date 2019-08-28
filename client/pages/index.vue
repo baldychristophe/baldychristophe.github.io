@@ -1,17 +1,19 @@
 <template lang="pug">
   .page-container
-    .intro-block
-      img.avatar(src="~/assets/images/christophe_baldy.jpg")
-      h1 Christophe Baldy
-      .details 
-        a(href="fr.linkedin.com/in/christophe-baldy") linkedin
-        span /
-        a(href="github.com/baldychristophe") github
+
+    intro-block
+    
     .content-block 
-      span Hello world with nuxt!
+      h3.block-title Professional Experience
+      .content-section
+        .line
+          .line-title Polyconseil
+          .line-content Software Engineer
 </template>
 
 <script>
+import IntroBlock from '../components/IntroBlock'
+
 export default {
   head () {
     return {
@@ -20,21 +22,26 @@ export default {
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { hid: 'description', name: 'description', content: 'Christophe Baldy resume' },
-        { hid: 'keywords', name: 'keywords', content: 'development, software, Christophe Baldy, resume' },
+        { hid: 'keywords', name: 'keywords', content: 'development, software, Christophe Baldy, resume, web, fullstack, frontend, backend' },
       ],
     }
-  } 
+  },
+  components: {
+    'intro-block': IntroBlock,
+  },
 }
 </script>
 
 <style scoped lang="scss">
-.intro-block {
-  text-align: center;
-  margin: 20px;
+.page-container {
+  max-width: 1024px;
+  margin: 20px auto;
+}
 
-  .avatar {
-    border-radius: 50%;
-    max-width: 200px;
+.content-block {
+  .block-title {
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
   }
 }
 </style>
