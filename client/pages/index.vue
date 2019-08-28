@@ -11,6 +11,6 @@ export default {
 <style scoped lang="scss">
 .hello {
   color: red;
-  outline: 1px solid black;
+  outline: 1px solid green;
 }
 </style>

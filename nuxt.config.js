@@ -1,9 +1,6 @@
-const distFolder = 'dist'
-
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: `/${distFolder}/`
+    base: '/dist/'
   }
 } : {}
 
@@ -16,4 +13,5 @@ const buildBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 export default {
   ...routerBase,
   ...buildBase,
+  srcDir: 'client/'
 }
