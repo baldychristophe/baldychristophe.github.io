@@ -3,12 +3,11 @@
 
     intro-block
     
-    .content-block 
-      h3.block-title Professional Experience
-      .content-section
-        .line
-          .line-title Polyconseil
-          .line-content Software Engineer
+    .section 
+      .resume
+        a(href="/resume.pdf") 
+          i.icon-file-pdf
+          span See resume
 </template>
 
 <script>
@@ -38,10 +37,41 @@ export default {
   margin: 20px auto;
 }
 
-.content-block {
-  .block-title {
-    text-transform: uppercase;
-    border-bottom: 1px solid black;
+.section {
+
+  .resume {
+    text-align: center;
+
+    a {
+      color: black;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 5px;
+
+      i {
+        margin-right: 5px;
+      }
+
+      // underline effect on hover
+      span {
+        position: relative;
+      }
+      span::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff5d60;
+        transform-origin: center;
+        transform: translate(-50%, 0) scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      span:hover::before {
+        transform: translate(-50%, 0) scaleX(1);
+      }
+    }
   }
 }
 </style>
