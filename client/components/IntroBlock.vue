@@ -8,6 +8,8 @@
           img.logo-link(src="~/assets/images/linkedin.svg")
         a(href="https://github.com/baldychristophe")
           img.logo-link(src="~/assets/images/github.svg")
+        a(href="/resume.pdf")
+          span CV
 </template>
 
 <style lang="scss" scoped>
