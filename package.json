@@ -6,7 +6,7 @@
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.9.1",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
